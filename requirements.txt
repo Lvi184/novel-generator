@@ -1,0 +1,5 @@
+openai&gt;=1.0.0
+anthropic&gt;=0.20.0
+chromadb&gt;=0.4.0
+jieba&gt;=0.42.0
+PyYAML&gt;=6.0
