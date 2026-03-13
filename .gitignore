@@ -22,8 +22,8 @@ wheels/
 
 # Virtual Environment
 venv/
-env/
 ENV/
+env/
 
 # IDE
 .vscode/
@@ -32,25 +32,27 @@ ENV/
 *.swo
 *~
 
-# Config (contains API keys)
-config.json
-
-# Output files
-data/output/*.txt
-data/output/*.json
-!data/output/.gitkeep
-
 # Logs
-logs/
 *.log
+logs/
+
+# Data - 避免提交小说原文和大文件
+data/*/input/novel.txt
+data/cache/
+data/*/output/
+data/*/output_enhanced/
+data/*/analysis/
+data/*/analysis_full/
+data/*/transformed/
+data/*/state/
+
+# Backup
+src_backup/
 
 # OS
 .DS_Store
 Thumbs.db
 
-# Node
-node_modules/
-
-# Temporary files
-*.tmp
-*.bak
+# Config - 避免提交API密钥
+config.json
+config/config.yaml

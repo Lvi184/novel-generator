@@ -6,9 +6,9 @@ import os
 import sys
 
 # 添加项目根目录到路径
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from novel_generator.llm_adapters import create_llm_adapter
+from llm_adapters import create_llm_adapter
 
 
 def main():

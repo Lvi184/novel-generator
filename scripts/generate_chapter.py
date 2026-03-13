@@ -7,9 +7,9 @@ import os
 import sys
 
 # 添加项目根目录到路径
-sys.path.insert(0, os.path.dirname(__file__))
+sys.path.insert(0, os.path.dirname(os.path.dirname(__file__)))
 
-from novel_generator.llm_adapters import create_llm_adapter
+from llm_adapters import create_llm_adapter
 
 
 def generate_chapter(config_path: str, chapter_num: int = 1):
@@ -91,21 +91,21 @@ def generate_chapter(config_path: str, chapter_num: int = 1):
 
 
 if __name__ == "__main__":
-    if len(sys.argv) &lt; 2:
-        print("用法：python generate_chapter.py --config &lt;config_path&gt; [--chapter &lt;num&gt;]")
+    if len(sys.argv) < 2:
+        print("用法：python generate_chapter.py --config <config_path> [--chapter <num>]")
         sys.exit(1)
     
     config_path = None
     chapter_num = 1
     
     for i in range(1, len(sys.argv)):
-        if sys.argv[i] == "--config" and i + 1 &lt; len(sys.argv):
+        if sys.argv[i] == "--config" and i + 1 < len(sys.argv):
             config_path = sys.argv[i + 1]
-        elif sys.argv[i] == "--chapter" and i + 1 &lt; len(sys.argv):
+        elif sys.argv[i] == "--chapter" and i + 1 < len(sys.argv):
             chapter_num = int(sys.argv[i + 1])
     
     if not config_path:
-        print("错误：请指定配置文件 --config &lt;config_path&gt;")
+        print("错误：请指定配置文件 --config <config_path>")
         sys.exit(1)
     
     generate_chapter(config_path, chapter_num)

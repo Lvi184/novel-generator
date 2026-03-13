@@ -1,0 +1,41 @@
+# chapter_generation
+
+## 描述
+章节生成
+
+## 模板
+请写都市重生小说的第{chapter_num}章，约4000字，古龙风格。
+
+## 基本设定
+- 主角：{protagonist_name}，{protagonist_age}岁程序员
+- 重生时间：2010年5月20日
+- 地点：{location}
+- 金手指：iPhone 15 Pro Max里有未来知识
+- 人物：{characters_text}
+
+{previous_summary}
+
+## 相关记忆
+{memories_text}
+
+## 本章大纲
+- 标题：{title}
+- 场景：{location_outline}
+- 角色：{characters_outline}
+- 核心事件：{core_event}
+- 情感基调：{emotional_tone}
+- 章末悬念：{chapter_hook}
+
+## 写作风格要求（古龙风格）
+1. 短句为主，一行一句
+2. 对话占比60%以上
+3. 章末必有强烈悬念
+4. 适当哲理思考
+5. 机智对白
+6. 注重心理描写
+7. 场景切换快
+8. 保持神秘氛围
+
+{improvement_text}
+
+现在开始写第{chapter_num}章：
