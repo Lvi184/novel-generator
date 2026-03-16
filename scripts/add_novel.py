@@ -21,6 +21,7 @@ def pinyin_slug(chinese_name):
         "凡人修仙传": "fan_ren_xiu_xian_zhuan",
         "庆余年": "qing_yu_nian",
         "雪中悍刀行": "xue_zhong_han_dao_xing",
+        "我在精神病院学斩神": "xue_zhong_han_dao_xing",
     }
     
     if chinese_name in mappings:

@@ -20,7 +20,7 @@ from phase1_analyzer import (
 
 
 def main():
-    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    config_path = os.path.join(os.path.dirname(__file__), "..", "config.json")
     
     print("=" * 60)
     print("Phase 1 - 完整版本测试（含递归摘要）")
@@ -46,7 +46,7 @@ def main():
     print("客户端创建成功！")
     
     # 输出目录
-    output_dir = os.path.join(os.path.dirname(__file__), "data", "analysis_full")
+    output_dir = os.path.join(os.path.dirname(__file__), "..", "data", "xue_zhong_han_dao_xing", "analysis_full")
     os.makedirs(output_dir, exist_ok=True)
     
     # Step 1: 分割小说
@@ -57,8 +57,8 @@ def main():
     splitter = NovelSplitter(novel_path)
     chapters = splitter.split_by_chapters()
     
-    # 分析前20章
-    max_chapters = min(20, len(chapters))
+    # 分析前5章
+    max_chapters = min(5, len(chapters))
     test_chapters = chapters[:max_chapters]
     
     print(f"\n将分析前 {max_chapters} 章")

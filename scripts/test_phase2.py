@@ -16,7 +16,7 @@ from phase2_transformer import (
 
 
 def main():
-    config_path = os.path.join(os.path.dirname(__file__), "config.json")
+    config_path = os.path.join(os.path.dirname(__file__), "..", "config.json")
     
     print("=" * 60)
     print("Phase 2 - 骨架变形模块测试")
@@ -29,7 +29,7 @@ def main():
     # 原著骨架路径
     skeleton_path = os.path.join(
         os.path.dirname(__file__),
-        "data", "analysis_full", "novel_skeleton.json"
+        "..", "data", "xue_zhong_han_dao_xing", "analysis_full", "novel_skeleton.json"
     )
     
     if not os.path.exists(skeleton_path):
@@ -55,7 +55,7 @@ def main():
     print("客户端创建成功！")
     
     # 输出目录
-    output_dir = os.path.join(os.path.dirname(__file__), "data", "transformed")
+    output_dir = os.path.join(os.path.dirname(__file__), "..", "data", "xue_zhong_han_dao_xing", "transformed")
     os.makedirs(output_dir, exist_ok=True)
     
     # 执行骨架变形
